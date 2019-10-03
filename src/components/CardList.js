@@ -9,14 +9,13 @@ const CardList = ({Robots}) => {
     return (
     <div>
        {
-        Robots.map((robotinarray,i) => {
+        Robots.map(robot => {
         return (
                 <Card 
-                    key={Robots[i].id} 
-                    id={Robots[i].id} 
-                    name={Robots[i].name} 
-                    username={Robots[i].username} 
-                    email={Robots[i].email}/>
+                    id={robot.id} 
+                    name={robot.name} 
+                    username={robot.username} 
+                    email={robot.email}/>
                 );
             })
         }
