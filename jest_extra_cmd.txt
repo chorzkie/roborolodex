@@ -1,0 +1,12 @@
+#To write snapshot in Jest v24, install enzyme to json
+
+npm install --save-dev enzyme-to-json
+
+#import in each shallow/render/static test files
+
+import toJson from 'enzyme-to-json';
+
+
+#When coverage test shows 0
+npm test -- --coverage --watchAll=false
+

@@ -14,11 +14,11 @@ import thunkMiddleware from 'redux-thunk'
 const logger = createLogger()
 
 const rootReducer = combineReducers({ searchRobots, requestRobots})
-const stateStore = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger))
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, logger))
 //const stateStore = createStore(searchRobots, applyMiddleware(logger))
 
 ReactDOM.render( 
-                <Provider store={stateStore}>
+                <Provider store={ store }>
                     <App /> 
                 </Provider>, 
                 document.getElementById('root'));

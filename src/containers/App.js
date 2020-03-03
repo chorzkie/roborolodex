@@ -4,6 +4,7 @@ import SearchBox from '../components/SearchBox';
 import './App.css';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
+import CounterButton from '../components/CounterButton';
 import { setSearchField, requestRobots } from '../Actions'
 import { connect } from 'react-redux';
 
@@ -50,6 +51,7 @@ class App extends React.Component {
             return (
                 <div className='tc'>
                     <h1 className='f1'>RoboFriends</h1>
+                    <CounterButton />
                     <SearchBox searchChange={this.props.onSearchChange} />
                     <Scroll>
                         <ErrorBoundary>
